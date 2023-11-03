@@ -1,0 +1,23 @@
+{% extends '_base.html' %}
+
+{% block page_title %}
+	login
+{% endblock %}
+
+{% block content %}
+<div class=" fit center ">
+	<div class=" center mt-5 text_color bo padding2 ">
+		<h1>LOGIN PAGE</h1>
+		<form action="" method="POST" >
+			{% csrf_token %}
+			{{ form.as_p }}
+			<button type="submit" class="btn btn-success">LOGIN</button>
+        <br><br>
+        <input type="checkbox" id="check">
+        <span>Remember me</span>
+        <br><br>
+        Forgot <a href="#">Password</a>?
+		</form>
+	</div>
+</div>
+{% endblock %}
