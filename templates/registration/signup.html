@@ -1,17 +1,19 @@
 {% extends '_base.html' %}
 
+{% load crispy_forms_tags %}
+
 {% block page_title %}
 	signup
 {% endblock %}
 
 {% block content %}
-<div class=" fit  center">
+<div class=" fit center">
 	<div class="  mt-5 text_color bo padding2 ">
 		<h1>SIGN UP PAGE</h1>
 		<form action="" method="POST" >
 			{% csrf_token %}
-			{{ form.as_p }}
-			<button type="submit" class="btn btn-success">SIGNUP</button>
+			{{ form|crispy }}
+			<button type="submit" class="btn rm">SIGNUP</button>
 
 		</form>
 	</div>

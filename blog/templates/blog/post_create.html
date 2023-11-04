@@ -1,5 +1,7 @@
 {% extends '_base.html' %}
 
+{% load crispy_forms_tags %}
+
 {% block page_title %}
 	add new post
 {% endblock %}
@@ -12,7 +14,7 @@
 					<h3>Add new Post:</h3>
 					<form method="POST">
 						{% csrf_token %}
-						{{ form.as_p  }}
+						{{ form|crispy  }}
 {#						<div class="form-group py-2">#}
 {#							<label class="py-1">Enter post title</label>#}
 {#							<input type="text" class="form-control" placeholder="e.g. Some Title" name="title">#}

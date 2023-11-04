@@ -1,17 +1,19 @@
 {% extends '_base.html' %}
 
+{% load crispy_forms_tags %}
+
 {% block page_title %}
 	login
 {% endblock %}
 
 {% block content %}
-<div class=" fit center ">
-	<div class=" center mt-5 text_color bo padding2 ">
+<div class=" fit center container">
+	<div class=" center mt-5 text_color bo padding3 ">
 		<h1>LOGIN PAGE</h1>
 		<form action="" method="POST" >
 			{% csrf_token %}
-			{{ form.as_p }}
-			<button type="submit" class="btn btn-success">LOGIN</button>
+			{{ form|crispy }}
+			<button type="submit" class="btn rm">LOGIN</button>
         <br><br>
         <input type="checkbox" id="check">
         <span>Remember me</span>
