@@ -13,11 +13,11 @@
 					<div class="card shadow my-3 white roundness">
 
 						<div class="card-body ">
-							<h2 class="card-title padding2 text_color">{{ post.title}}</h2>
+							<h2 class="card-title padding2 text_color">{{ post.title|title|upper }}</h2>
 							<h6 class="card-subtitle mb-2 text-muted small py-2 padding">By:{{ post.author }}</h6>
 							<div class="text margin">
-							<p class="card-text text_color paragraph">
-							{{ post.text }}
+							<p class="card-text text_color ">
+							{{ post.text|truncatewords:20 }}
 							</p>
 							</div >
 

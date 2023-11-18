@@ -10,9 +10,9 @@
 			<div class="col-9">
 
 				<div class="card shadow my-3 p-5 white roundness">
-					<h1 class="text_color">{{ post.title }}</h1>
+					<h1 class="text_color">{{ post.title|title|upper }}</h1>
 					<p class="small text-muted mt-2 text_color">By: {{ post.author }}</p>
-					<p class="mt-2 text_color">{{ post.text }}</p>
+					<p class="mt-2 text_color">{{ post.text|linebreaks }}</p>
 					<div>
 						<a href="{% url 'post_update' post.id %}" class="btn btn-sm rm_d  ">Edit</a>
 						<a href="{% url 'post_delete' post.id %}" class="btn btn-sm red">delete</a>
